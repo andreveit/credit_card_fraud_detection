@@ -1,68 +1,82 @@
-Author: Andre Veit
+   **Author:** Andre Veit
 
-LinkedIn: https://www.linkedin.com/in/andreveit/
+   **LinkedIn:** https://www.linkedin.com/in/andreveit/
 
-E-mail: andrev.veit@gmail.com
+   **E-mail:** andrev.veit@gmail.com
 
-CREDIT CARD FRAUD DECTECTION
-Classification of Imbalanced Data and Anomaly Detection
-creditcardimg.jpg
+# CREDIT CARD FRAUD DECTECTION
+## Classification of Imbalanced Data and Anomaly Detection
 
-About this notebook
-Fraud is not something new, in a matter of fact, according to Your Money website, the first fraud register happened back in 300 BC. Now a days, in a world where the internet and digitalization is increasing at an unbelievable rate, millions of transactions and other operations are realized every day through the network. That means many opportunities for fraudsters.
+![creditcardimg.jpg](https://github.com/andreveit/credit_card_fraud_detection/blob/main/creditcardimg.jpg?raw=true)
 
-Fortunately, there are relatively few. Unfortunately... this fact makes extremely hard to catch them.
+# **About this notebook**
+
+
+Fraud is not something new, in a matter of fact, according to Your Money website, the first fraud register happened back in 300 BC. Now a days, in a world where the internet and digitalization is increasing at an unbelievable rate, millions of transactions and other operations are realized every day through the network. That means many opportunities for fraudsters. 
+
+Fortunately, there are relatively few. Unfortunately... this fact makes extremely hard to catch them. 
 
 The objective of this notebook is to explore a few methods to deal with anomaly detection and highly imbalanced data sets.
 
+<br>
+<br>
 
+### **Overview:**
 
-Overview:
+1. Data Exploration and Preparation
+2. Unsupervised Learning - Anomaly Detection
+>2.1. Isolation Forest<br>
+>2.2. Local Outlier Factor
+3. Supervised Learning - Classification
+>3.1. Logistic Regression<br>
+>3.2. Random Forest<br>
+>3.3. Support Vector Machines
+4. Autoencoder - Unsupervised and  Semi-Supervised Learning
+>4.1. Unsupervised Learning<br>
+>4.2. Semi-Supervised Learning<br>
 
-Data Exploration and Preparation
-Unsupervised Learning - Anomaly Detection
-2.1. Isolation Forest
-2.2. Local Outlier Factor
+<br>
+<br>
 
-Supervised Learning - Classification
-3.1. Logistic Regression
-3.2. Random Forest
-3.3. Support Vector Machines
+# Data Set
 
-Autoencoder - Unsupervised and Semi-Supervised Learning
-4.1. Unsupervised Learning
-4.2. Semi-Supervised Learning
-
-Data Set
 This dataset is from Kaggle website and can be found though the link:
 
 https://www.kaggle.com/mlg-ulb/creditcardfraud
 
+
 Below the data description from the original source.
 
+<br>
+<br>
 
-
-Context
+## Context
 It is important that credit card companies are able to recognize fraudulent credit card transactions so that customers are not charged for items that they did not purchase.
 
+<br>
 
-Content
-The datasets contains transactions made by credit cards in September 2013 by european cardholders. This dataset presents transactions that occurred in two days, where we have 492 frauds out of 284,807 transactions. The dataset is highly unbalanced, the positive class (frauds) account for 0.172% of all transactions.
+## Content
+The datasets contains transactions made by credit cards in September 2013 by european cardholders.
+This dataset presents transactions that occurred in two days, where we have 492 frauds out of 284,807 transactions. The dataset is highly unbalanced, the positive class (frauds) account for 0.172% of all transactions.
 
 It contains only numerical input variables which are the result of a PCA transformation. Unfortunately, due to confidentiality issues, we cannot provide the original features and more background information about the data. Features V1, V2, … V28 are the principal components obtained with PCA, the only features which have not been transformed with PCA are 'Time' and 'Amount'. Feature 'Time' contains the seconds elapsed between each transaction and the first transaction in the dataset. The feature 'Amount' is the transaction Amount, this feature can be used for example-dependant cost-senstive learning. Feature 'Class' is the response variable and it takes value 1 in case of fraud and 0 otherwise.
 
+<br>
 
-Inspiration
+## Inspiration
 Identify fraudulent credit card transactions.
 
 Given the class imbalance ratio, we recommend measuring the accuracy using the Area Under the Precision-Recall Curve (AUPRC). Confusion matrix accuracy is not meaningful for unbalanced classification.
 
+<br>
 
-Acknowledgements
-The dataset has been collected and analysed during a research collaboration of Worldline and the Machine Learning Group (http://mlg.ulb.ac.be) of ULB (Université Libre de Bruxelles) on big data mining and fraud detection. More details on current and past projects on related topics are available on https://www.researchgate.net/project/Fraud-detection-5 and the page of the DefeatFraud project
+## Acknowledgements
+The dataset has been collected and analysed during a research collaboration of Worldline and the Machine Learning Group (http://mlg.ulb.ac.be) of ULB (Université Libre de Bruxelles) on big data mining and fraud detection.
+More details on current and past projects on related topics are available on https://www.researchgate.net/project/Fraud-detection-5 and the page of the DefeatFraud project
 
+<br>
 
-Please cite the following works:
+**Please cite the following works:**
 
 Andrea Dal Pozzolo, Olivier Caelen, Reid A. Johnson and Gianluca Bontempi. Calibrating Probability with Undersampling for Unbalanced Classification. In Symposium on Computational Intelligence and Data Mining (CIDM), IEEE, 2015
 
